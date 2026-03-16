@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="canonical" href="https://islamic-portal.vercel.app/article">
+
+<!-- BASIC SEO -->
+<title>Portal Literasi Islam | Mimbar Ilmu untuk Umat</title>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD9932Y04M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FD9932Y04M');
+</script>
+
+<meta name="description" content="Portal artikel Islam ilmiah dan akademik.">
+<meta name="author" content="Muhammad Nurcholis">
+
+
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Portal Literasi Islam">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Portal Literasi Islam">
+<meta name="twitter:description" content="Mimbar Ilmu untuk Umat. Kajian fiqih, hadis, dan pemikiran Islam.">
+<meta name="twitter:image" content="https://islamic-portal.vercel.app/assets/images/preview.jpg">
+
+<!-- SCHEMA JSON -->
+<script id="schema-article" type="application/ld+json"></script>
+
+<!-- STYLE -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/style.css?v=20260313z">
+<link rel="stylesheet" href="css/article.css?v=20260316e">
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Scheherazade+New&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Amiri&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="progress-bar"></div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <a href="/" class="back-btn" aria-label="Kembali ke Beranda">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+         stroke="white" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </a>
+  <h1 class="logo">Portal Literasi Islam</h1>
+   <!-- 🌙 DARK MODE -->
+  <button id="themeToggle" class="theme-toggle">🌙</button>
+  <a href="bookmark" class="nav-bookmark-icon">🔖 <span class="bookmark-count">3</span></a>
+  <a href="bookmark" class="nav-bookmark">
+  <i class="fa-solid fa-bookmark"></i>
+  <span id="bookmark-count" class="bookmark-badge">0</span>
+</a>
+</header>
+
+<!-- ARTIKEL -->
+<main class="article-content">
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb">
+    <a href="/">Home</a>
+    <span id="breadcrumb-category"></span>
+    <span id="breadcrumb-title"></span>
+  </nav>
+
+<button id="musicToggle" class="music-toggle">
+  🎵
+</button>
+
+<audio id="bgMusic" loop></audio>
+
+
+  <!-- THUMBNAIL -->
+  <img id="article-thumb" class="article-thumb" alt="">
+
+  <div class="toc-wrap">
+  <button id="tocToggle" class="toc-toggle" type="button" aria-expanded="false" aria-controls="toc">
+    <span class="toc-toggle-icon">☰</span>
+    <span>Daftar Isi</span>
+  </button>
+  <nav id="toc" class="toc" aria-label="Daftar Isi">
+    <h3>
+      <span class="toc-title-icon">📑</span>
+      <span>Daftar Isi</span>
+    </h3>
+    <ul id="toc-list"></ul>
+  </nav>
+ </div>
+
+  <!-- NOT FOUND -->
+  <div id="not-found" style="display:none; text-align:center; padding:40px;">
+    <h2>Artikel tidak ditemukan</h2>
+    <p>Artikel yang Anda cari belum tersedia atau tautan tidak valid.</p>
+    <a href="/" class="btn-premium">Kembali ke Beranda</a>
+  </div>
+
+ <!-- KONTEN ARTIKEL -->
+<article id="article-body">
+
+  <h2 id="judul-artikel"></h2>
+
+  <!-- TOOLBAR ATAS -->
+  <div class="article-tools">
+    <div class="article-translate">
+      <span id="article-translate-label">🌐 Terjemahkan:</span>
+      <button type="button" data-set-lang="id">ID</button>
+      <button type="button" data-set-lang="en">EN</button>
+      <button type="button" data-set-lang="ar">AR</button>
+    </div>
+
+    <div class="font-size-control">
+      <button id="fontMinus">A-</button>
+      <button id="fontPlus">A+</button>
+    </div>
+  </div>
+
+  <!-- READER CONTROLS -->
+ <div class="reader-controls">
+  <button id="focusModeBtn" class="focus-btn">
+    🔔 Mode Fokus
+  </button>
+<button id="offlineSaveBtn" class="reader-btn">
+  ⬇️ Simpan Offline
+</button>
+  <button id="bookmarkBtn" class="bookmark-btn">⭐ Simpan</button>
+  <button id="readModeBtn" class="reader-btn">📖 Mode Baca</button>
+  <button id="resetBtn" class="reader-btn danger">♻️ Reset</button>
+</div>
+
+<p class="bookmark-hint">
+  📌 Artikel tersimpan dapat dilihat di menu <strong>Bookmark</strong>
+</p>
+
+
+  <!-- META -->
+  <div class="meta">
+    <span id="penulis"></span>
+    <span id="tanggal"></span>
+    <span id="read-time">🕒 0 menit baca</span>
+    <span id="kategori" class="category"></span>
+  </div>
+
+  <!-- SHARE -->
+  <div class="share-buttons">
+    <button id="share-wa" class="share-btn wa">💬 WhatsApp</button>
+    <button id="copy-link" class="share-btn">🔗 Copy Link</button>
+  </div>
+
+  <!-- ISI -->
+  <div id="isi-artikel"></div>
+
+</article>
+<!-- QUOTE BOX (GLOBAL, FIXED) -->
+<div id="quoteBox" class="quote-box">
+  <p id="quoteText"></p>
+  <div class="quote-actions">
+    <button id="copyQuote">📋 Copy</button>
+    <button id="waQuote">💬 WhatsApp</button>
+    <button id="closeQuote">✕</button>
+  </div>
+</div>
+
+  <!-- PREV / NEXT -->
+  <div class="article-nav">
+    <a id="prev-article" class="nav-link"></a>
+    <a id="next-article" class="nav-link"></a>
+  </div>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-articles">
+    <h3>Artikel Terkait</h3>
+    <div id="related-container" class="related-list"></div>
+  </section>
+
+<section class="recommended-section">
+  <h3>✨ Artikel Direkomendasikan</h3>
+  <div id="recommended-container" class="recommended-list"></div>
+</section>
+
+</main>
+<section class="prefooter">
+  <div class="prefooter-overlay"></div>
+
+  <div class="prefooter-inner">
+
+    <!-- KOLOM 1 -->
+    <div class="prefooter-col">
+      <h4>Portal Literasi Islam</h4>
+      <p>
+        Portal kajian Islam yang menghadirkan analisis ilmiah,
+        pemikiran kritis, dan dialog keislaman dalam konteks modern.
+      </p>
+    </div>
+
+    <!-- KOLOM 2 -->
+    <div class="prefooter-col">
+      <h4>Kajian Utama</h4>
+      <ul>
+      <li><a href="/?filter=fiqh">Fiqh & Ushul Fiqh</a></li>
+<li><a href="/?filter=hadis">Hadis & Studi Sanad</a></li>
+<li><a href="/?filter=pemikiran">Pemikiran Islam</a></li>
+<li><a href="/?filter=politik">Islam & Negara</a></li>
+<li><a href="/?filter=kontemporer">Isu Kontemporer</a></li>
+</ul>
+    </div>
+
+    <!-- KOLOM 3 -->
+    <div class="prefooter-col">
+      <h4>Fitur</h4>
+      <ul>
+        <li>Artikel Pilihan</li>
+        <li>Bookmark Artikel</li>
+        <li>Pencarian Cerdas</li>
+        <li>Mode Baca</li>
+        <li>Multi Bahasa</li>
+      </ul>
+    </div>
+
+    <!-- KOLOM 4 -->
+    <div class="prefooter-col">
+      <h4>Catatan</h4>
+      <p class="prefooter-note">
+        Seluruh konten disajikan untuk tujuan edukasi dan kajian ilmiah,
+        bukan sebagai fatwa atau klaim kebenaran tunggal.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- SOSIAL MEDIA (TENGAH BAWAH) -->
+   <div class="prefooter-social">
+    <a href="https://wa.me/6282124305278" aria-label="WhatsApp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="https://instagram.com/nurcholism51" aria-label="Instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.threads.net/@nurcholism51" aria-label="Threads" target="_blank">
+  <i class="fa-brands fa-threads"></i>
+</a>
+    <a href="mailto:nurcholism51@gmail.com" aria-label="Email">
+      <i class="fa-regular fa-envelope"></i>
+    </a>
+  </div>
+</section>
+
+<button id="scrollToTopBtn" class="scroll-to-top" aria-label="Kembali ke atas">
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M12 19V5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+
+ <footer class="site-footer">
+
+  <div class="footer-links">
+    <a href="about">Tentang</a>
+    <a href="faq">FAQ</a>
+    <a href="kontak">Kontak</a>
+    <a href="privacy">Privacy Policy</a>
+    <a href="disclaimer">Disclaimer</a>
+  </div>
+
+  <div class="footer-copy">
+    &copy; 2026 Portal Literasi Islam - Seluruh hak cipta dilindungi.
+  </div>
+
+</footer>
+
+
+<!-- TOAST NOTIFICATION -->
+<div id="toast" class="toast"></div>
+
+<script src="js/article-store.js?v=20260313n"></script>
+<script type="module" src="js/bookmark.js?v=20260313k"></script>
+<script type="module" src="js/article.js?v=20260316h"></script>
+<script type="module" src="js/music.js"></script>
+<script src="js/i18n.js?v=20260316a"></script>
+
+<script src="js/auth.js"></script>
+<script src="js/access-guard.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

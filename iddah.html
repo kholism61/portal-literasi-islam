@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kalkulator Iddah</title>
+
+<link rel="stylesheet" href="css/iddah.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="nav-title">
+Fiqh Wanita
+</div>
+
+<div class="nav-links">
+
+<a href="haid.html">Kalkulator Haid</a>
+
+<a href="iddah.html" class="active">Kalkulator Iddah</a>
+
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<h1>Kalkulator Masa Iddah</h1>
+
+<p>Menghitung masa iddah menurut fiqh Islam</p>
+
+</section>
+
+
+<div class="container">
+
+<div class="card">
+
+<label>Jenis Iddah</label>
+
+<select id="iddahType">
+
+<option value="talak">Talak (3 Quru')</option>
+
+<option value="talakQabla">Talak sebelum Dukhul</option>
+
+<option value="wafat">Wafat</option>
+
+<option value="hamil">Hamil</option>
+
+<option value="fasakh">Fasakh / Pembatalan Nikah</option>
+
+</select>
+
+
+<label>Tanggal Mulai</label>
+
+<input type="date" id="startDate">
+
+
+<button onclick="hitungIddah()">
+Hitung Masa Iddah
+</button>
+
+
+<div class="result-card" id="result">
+
+<h3>Hasil Perhitungan Iddah</h3>
+
+<div class="iddah-main">
+
+<p><b>Jenis Iddah:</b> <span id="jenis"></span></p>
+
+<p><b>Tanggal Mulai:</b> <span id="mulai"></span></p>
+
+<p><b>Durasi:</b> <span id="durasi"></span></p>
+
+<p><b>Berakhir:</b> <span id="akhir"></span></p>
+
+<p><b>Status Saat Ini:</b> <span id="status"></span></p>
+
+</div>
+
+<div class="iddah-progress">
+
+<div id="iddahBar"></div>
+
+</div>
+
+<hr>
+
+<h4>Timeline Iddah</h4>
+
+<div id="timeline" class="timeline"></div>
+
+
+<div class="legend-quru">
+
+<span class="quru1-box"></span> Quru 1
+
+<span class="quru2-box"></span> Quru 2
+
+<span class="quru3-box"></span> Quru 3
+
+</div>
+
+<p class="quru-info">
+Dalam mazhab Syafi'i, quru berarti masa suci di antara dua haid.
+Iddah selesai setelah tiga masa suci.
+</p>
+
+<hr>
+
+<h4>Penjelasan Fiqh</h4>
+
+<p id="fiqhText"></p>
+
+<p class="dalil" id="dalil"></p>
+
+<hr>
+
+<h4>Catatan Selama Masa Iddah</h4>
+
+<ul id="rules"></ul>
+
+<hr>
+
+<h4>Referensi Kitab</h4>
+
+<ul class="kitab">
+
+<li>Kifayatul Akhyar</li>
+
+<li>Fathul Qarib</li>
+
+<li>Al-Majmu'</li>
+
+<li>Tuhfatul Muhtaj</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="data-haid">
+
+<div>Rata-rata Haid: <span id="avgHaid">-</span> hari</div>
+
+<div>Masa Suci: <span id="avgSuci">-</span> hari</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-left">
+Portal Literasi Islam
+</div>
+
+<div class="footer-menu">
+
+<a href="haid.html">Haid</a>
+<a href="suci.html">Masa Suci</a>
+<a href="nifas.html">Nifas</a>
+<a href="iddah.html">Iddah</a>
+
+</div>
+
+<div class="footer-copy">
+© 2026 Fiqh Wanita – Mazhab Syafi'i
+</div>
+
+</div>
+
+</footer>
+
+
+
+<script src="js/iddah.js"></script>
+<script src="js/fiqh-wanita-i18n.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/access-guard.js"></script>
+
+</body>
+</html>
+
+
+

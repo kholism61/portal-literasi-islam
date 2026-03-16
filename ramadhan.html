@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Ramadhan</title>
+
+  <link rel="canonical" href="https://islamic-portal.vercel.app/ramadhan.html">
+
+  <meta name="description" content="Jadwal Ramadhan, waktu imsak, subuh, dan berbuka puasa otomatis berdasarkan lokasi Anda.">
+<meta name="keywords" content="Ramadhan, Jadwal Puasa, Imsak, Subuh, Maghrib, Al-Qur'an">
+<meta name="author" content="Portal Literasi Islam">
+<meta name="theme-color" content="#0f172a">
+
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD9932Y04M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FD9932Y04M');
+</script>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/ramadhan.css">
+</head>
+<body>
+
+    <nav class="ramadhan-navbar">
+  <div class="logo">
+    🌙 <span>Jadwal Ramadhan</span>
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="ramadhan.html">Ramadhan</a>
+    <a href="bookmark.html">Bookmark</a>
+  </div>
+
+  <div class="prayer-mini" id="prayerMini">
+  <span id="mini-name">Subuh</span>
+  <strong id="mini-time">--:--</strong>
+</div>
+
+  <button id="themeToggle">🌙</button>
+</nav>
+
+<section class="ramadhan-hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>🌙 Ramadhan Mubarak</h1>
+    <p class="hero-sub">
+      Bulan penuh berkah, ampunan, dan rahmat.
+    </p>
+
+   <h2 class="ramadhan-countdown">
+  <span id="hero-countdown" class="countdown-box">
+    Memuat...
+  </span>
+</h2>
+
+<p class="hijri-date" id="hijriDate">Memuat tanggal hijriyah...</p>
+
+    <div class="hero-buttons">
+      <a href="#jadwal" class="hero-btn primary">
+        Lihat Jadwal Hari Ini
+      </a>
+      <button class="hero-btn secondary" id="notifyBtn">
+        Aktifkan Notifikasi
+      </button>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<div class="doa-harian-box">
+  <h3>🤲 Doa Hari Ini</h3>
+  <div id="doa-harian">Memuat doa...</div>
+</div>
+
+<section class="ramadhan-box" id="jadwal">
+  <h1>🗓️ Jadwal Ramadhan</h1>
+ 📍 <p id="ramadhan-city">Mendeteksi lokasi…</p>
+
+ <!-- DOA RAMADHAN -->
+<div id="ramadhan-dua" class="ramadhan-dua" style="display:none;">
+  <p id="dua-text"></p>
+</div>
+
+ <!-- TABEL RAMADHAN -->
+<div class="ramadhan-table-box">
+  <h2>📅 Jadwal Ramadhan 1 Bulan</h2>
+
+  <div class="qibla-box">
+  <h3>🧭 Arah Kiblat</h3>
+  <div id="qiblaDirection">Mendeteksi...</div>
+</div>
+
+  <div class="table-scroll">
+    <table class="ramadhan-table">
+      <thead>
+        <tr>
+          <th>Hari</th>
+          <th>Tanggal</th>
+          <th>Imsak</th>
+          <th>Subuh</th>
+          <th>Maghrib</th>
+        </tr>
+      </thead>
+      <tbody id="ramadhan-table-body">
+        <tr>
+          <td colspan="5">Memuat jadwal...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  <div class="ramadhan-grid">
+    <div class="ramadhan-card">
+      <h3>⏰ Imsak</h3>
+      <span id="time-imsak">--:--</span>
+    </div>
+
+    <div class="ramadhan-card">
+      <h3>🌅 Subuh</h3>
+      <span id="time-fajr">--:--</span>
+    </div>
+
+    <div class="ramadhan-card">
+      <h3>🌇 Berbuka (Maghrib)</h3>
+      <span id="time-maghrib">--:--</span>
+    </div>
+  </div>
+
+  <div class="ramadhan-countdown">
+  <h2 id="ramadhan-next">Memuat...</h2>
+</div>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+  <div class="footer-links">
+    <a href="about.html">Tentang</a>
+    <a href="faq.html">FAQ</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
+
+  <div class="footer-copy">
+    © 2026 Portal Literasi Islam – Seluruh hak cipta dilindungi.
+  </div>
+
+</footer>
+
+<audio id="adzan-audio" src="assets/audio/azan/mishary.mp3" preload="auto"></audio>
+
+
+
+<script src="js/ramadhan.js"></script>
+<script src="js/common-brand-i18n.js"></script>
+<script src="js/static-pages-i18n.js"></script>
+
+<script src="js/auth.js"></script>
+<script src="js/access-guard.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator Haid Syafi'i</title>
+<link rel="stylesheet" href="css/haid.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-title">Portal Literasi Islam</div>
+  <div class="nav-links">
+
+<a href="index.html">Beranda</a>
+
+<a href="tools/mawaris.html">Hitung Mawaris</a>
+
+<a href="haid.html" class="active">Kalkulator Haid</a>
+
+<a href="nifas.html">Kalkulator Nifas</a>
+
+<a href="suci.html">Masa Suci</a>
+
+<a href="iddah.html">Kalkulator Iddah</a>
+
+</div>
+</nav>
+
+<section class="hero">
+  <h1>Kalkulator Haid</h1>
+  <p>Mazhab Syafi'i - Sistem Fiqh Wanita</p>
+</section>
+
+<div class="container">
+
+  <div class="card">
+
+   <label>Tanggal Selesai Haid Sebelumnya (Opsional)</label>
+<input type="date" id="prevEnd" lang="en-CA">
+
+<label>Tanggal Mulai Darah</label>
+<input type="date" id="start" lang="en-CA">
+
+<label>Tanggal Selesai Darah</label>
+<input type="date" id="end" lang="en-CA">
+
+    <label>Status Wanita</label>
+    <select id="type">
+      <option value="mubtadiah">Mubtadi’ah (Pertama Kali)</option>
+      <option value="mu'tadah">Mu’tadah (Punya Kebiasaan)</option>
+      <option value="mustahadhah">Mustahadhah (Darah Terus)</option>
+    </select>
+
+<div class="mumayyiz-wrapper">
+  <input type="checkbox" id="mumayyiz">
+  <label for="mumayyiz">
+    Bisa membedakan darah kuat & lemah (Mumayyizah)
+  </label>
+</div>
+
+<div id="tamyizBox" style="display:none;">
+  <label>Jumlah Hari Darah Kuat</label>
+  <input type="number" id="strongDays" placeholder="Masukkan jumlah hari darah kuat">
+</div>
+
+    <label>Kebiasaan Haid (Hari)</label>
+    <input type="number" id="habit" placeholder="Isi jika Mu’tadah / Mustahadhah">
+
+    <button onclick="hitung()">Hitung Sekarang</button>
+
+  </div>
+
+ <div class="result-card" id="hasil"></div>
+ <div class="ai-box" id="aiAnalysis"></div>
+
+ <div class="fiqh-box">
+<h3>Analisis Fiqh</h3>
+
+<div class="fatwa-box">
+<div class="fatwa-title">Fatwa AI Fiqh</div>
+<div id="fatwaText"></div>
+</div>
+
+<div class="ai-engine">
+
+<h3>AI Fiqh Engine</h3>
+
+<p><b>Jenis Wanita:</b> <span id="aiType"></span></p>
+
+<p><b>Kesimpulan Hukum:</b> <span id="aiHukum"></span></p>
+
+</div>
+
+<div class="fiqh-item">
+<span>Jenis Wanita:</span>
+<b id="fiqhType">-</b>
+</div>
+
+<div class="fiqh-item">
+<span>Kebiasaan Haid:</span>
+<b id="habitHaid">-</b>
+</div>
+
+<div class="fiqh-item">
+<span>Status Darah:</span>
+<b id="bloodStatus">-</b>
+</div>
+
+<div class="fiqh-item">
+<span>Hukum:</span>
+<b id="fiqhRule">-</b>
+</div>
+
+<div id="fiqhSource"></div>
+
+</div>
+
+<div class="prediction-box" id="nextCycle">📅
+Perkiraan siklus berikutnya: -
+</div>
+
+<div class="hijri-box">
+Tanggal Hijriyah: <span id="hijriDate"></span>
+</div>
+
+<div class="prediksi-durasi">
+Perkiraan durasi haid:
+<span id="predDurasi">-</span>
+</div>
+
+<div class="prediction-box">
+
+<div class="section-title">Prediksi 6 Bulan</div>
+
+<ul id="predictionList"></ul>
+
+</div>
+
+ <div class="calendar-header">
+  <div>Min</div>
+  <div>Sen</div>
+  <div>Sel</div>
+  <div>Rab</div>
+  <div>Kam</div>
+  <div>Jum</div>
+  <div>Sab</div>
+</div>
+
+<div class="timeline" id="timeline"></div>
+
+<div class="calendar-toolbar">
+  <button id="prevMonth">&lt;</button>
+  <div id="monthTitle"></div>
+  <button id="nextMonth">&gt;</button>
+</div>
+
+<label>Warna darah dominan</label>
+
+<select id="bloodColor">
+
+<option value="dark">Merah tua / hitam</option>
+
+<option value="normal">Merah biasa</option>
+
+<option value="light">Merah muda</option>
+
+<option value="yellow">Kuning / keruh</option>
+
+</select>
+
+<div class="stats-box">
+
+<div class="stats-card">
+<div class="stats-title">⏱️ Durasi Haid</div>
+<div class="stats-value" id="avgHaid"></div>
+</div>
+
+<div class="stats-card">
+<div class="stats-title">🩸 Total Darah</div>
+<div class="stats-value" id="cycle"></div>
+</div>
+
+<div class="stats-card">
+<div class="stats-title">Rata-rata Haid</div>
+<div class="stats-value" id="avgCycle">-</div>
+</div>
+
+<div class="stats-card">
+<div class="stats-title">Siklus Terpendek</div>
+<div class="stats-value" id="minCycle">-</div>
+</div>
+
+<div class="stats-card">
+<div class="stats-title">Siklus Terpanjang</div>
+<div class="stats-value" id="maxCycle">-</div>
+</div>
+
+<div class="stats-card">
+<div class="stats-title">Status Siklus</div>
+<div class="stats-value" id="cycleStatus">-</div>
+</div>
+
+<div class="stats-card">
+  <div class="stats-title">Rata-rata Suci</div>
+  <div class="stats-value" id="avgSuci"></div>
+</div>
+
+</div>
+
+<div id="calendar"></div>
+<div class="timeline-container">
+
+<div class="section-title">Timeline Fiqh</div>
+
+<div id="fiqhTimeline" class="timeline-grid"></div>
+
+</div>
+<div class="legend">
+  <div><span class="dot haid"></span> Haid</div>
+  <div><span class="dot istihadhah"></span> Istihadhah</div>
+  <div><span class="dot suci"></span> Suci</div>
+  <div><span class="dot prediction"></span> Prediksi</div>
+</div>
+
+</div>
+
+
+<div class="chart-container">
+
+  <div class="chartBox">
+    <canvas id="cycleChart"></canvas>
+  </div>
+
+  <div class="historyBox">
+    <h3>Riwayat Siklus</h3>
+    <ul id="historyList"></ul>
+  </div>
+
+  <button onclick="exportData()" class="export-btn">
+Download Riwayat
+</button>
+
+<button onclick="resetHistory()">Reset Riwayat</button>
+
+<a href="istihadhah.html" class="istihadhah-btn">
+Lanjut ke Kalkulator Istihadhah →
+</a>
+
+</div>
+
+
+<div class="pre-footer">
+
+<div class="pre-footer-grid">
+
+<div class="pf-box">
+<h3>Portal Literasi Islam</h3>
+<p>
+Website ini menyediakan kalkulator fiqh wanita,
+mawaris, dan berbagai alat bantu fiqh berbasis
+mazhab Syafi'i.
+</p>
+</div>
+
+<div class="pf-box">
+<h3>Fitur</h3>
+<ul>
+<li>Kalkulator Haid</li>
+<li>Kalkulator Mawaris</li>
+<li>Fiqh Wanita</li>
+<li>Artikel Fiqh</li>
+</ul>
+</div>
+
+<div class="pf-box">
+<h3>Referensi</h3>
+<ul>
+<li>Kifayatul Akhyar</li>
+<li>Fathul Qarib</li>
+<li>Al-Ibanah Wal Ifadhah</li>
+<li>Tuhfatul Muhtaj</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<footer class="site-footer">
+
+<div class="footer-links">
+
+<a href="about.html">Tentang</a>
+<a href="faq.html">FAQ</a>
+<a href="kontak.html">Kontak</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="disclaimer.html">Disclaimer</a>
+
+</div>
+
+<div class="footer-copy">
+© 2026 Portal Literasi Islam • Seluruh hak cipta dilindungi.
+</div>
+
+</footer>
+
+<script>
+document.getElementById("mumayyiz").addEventListener("change", function(){
+  document.getElementById("tamyizBox").style.display =
+    this.checked ? "block" : "none";
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+<script src="js/haid-engine.js"></script>
+<script src="js/fiqh-wanita-i18n.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/access-guard.js"></script>
+
+</body>
+</html>
+
+
+

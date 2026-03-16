@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Dashboard Admin Zakat</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD9932Y04M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FD9932Y04M');
+  </script>
+
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <nav class="main-navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-icon">📊</span>
+        <span class="logo-text">Zakat Portal</span>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="zakat.html">Kalkulator Zakat</a></li>
+        <li><a href="donasi.html">Donasi</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="admin-header">
+    <h1>Dashboard Zakat</h1>
+
+    <div class="admin-actions">
+      <select id="filter-type" class="filter-select">
+        <option value="all">Semua Kategori</option>
+        <option value="Zakat">Zakat</option>
+        <option value="Donasi">Donasi</option>
+        <option value="Fitrah">Fitrah</option>
+      </select>
+
+      <button class="export-btn" onclick="exportToExcel()">Export Excel</button>
+      <button class="pdf-btn" onclick="exportToPDF()">Export PDF</button>
+      <button class="reset-btn" onclick="resetAllData()">Reset Data</button>
+    </div>
+  </div>
+
+  <div class="admin-stats">
+    <div class="stat">
+      <h2 id="total-users">0</h2>
+      <p>Total Pengguna</p>
+    </div>
+
+    <div class="stat">
+      <h2 id="total-zakat">Rp 0</h2>
+      <p>Total Zakat</p>
+    </div>
+  </div>
+
+  <h2>Riwayat Zakat</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Jenis</th>
+        <th>Jumlah</th>
+        <th>Tanggal</th>
+      </tr>
+    </thead>
+    <tbody id="zakat-table"></tbody>
+  </table>
+
+  <div class="admin-chart">
+    <h3>Grafik Zakat Bulanan</h3>
+    <canvas id="monthlyChart"></canvas>
+  </div>
+
+  <section class="admin-dashboard">
+    <div class="admin-stats">
+      <div class="stat-card">
+        <span>Total Zakat</span>
+        <h2 id="stat-total-zakat">Rp 0</h2>
+      </div>
+
+      <div class="stat-card">
+        <span>Total Transaksi</span>
+        <h2 id="stat-total-transaksi">0</h2>
+      </div>
+
+      <div class="stat-card">
+        <span>Total User</span>
+        <h2 id="stat-total-user">0</h2>
+      </div>
+    </div>
+
+    <div class="admin-filters">
+      <label>Dari:</label>
+      <input type="date" id="filter-from">
+
+      <label>Sampai:</label>
+      <input type="date" id="filter-to">
+
+      <button onclick="applyDateFilter()" class="filter-btn">Terapkan</button>
+    </div>
+
+    <div class="admin-charts">
+      <canvas id="monthlyChart" height="120"></canvas>
+      <canvas id="yearlyChart" height="120"></canvas>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Zakat Portal</h3>
+        <p>
+          Platform kalkulator dan pengelolaan zakat modern
+          untuk memudahkan umat menunaikan kewajiban.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="zakat.html">Kalkulator</a></li>
+          <li><a href="donasi.html">Donasi</a></li>
+          <li><a href="about.html">Tentang</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>Email: nurcholism51@gmail.com</p>
+        <p>WhatsApp: +62 821-2430-5278</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Zakat Portal. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  
+  <script src="js/admin-pages-i18n.js"></script>
+  <script src="js/zakat.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/auth.js"></script>
+<script src="js/access-guard.js"></script>
+
+</body>
+</html>
+
+
+

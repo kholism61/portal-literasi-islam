@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kalkulator Istihadhah</title>
+
+<link rel="stylesheet" href="css/istihadhah.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="nav-logo">Fiqh Wanita</div>
+
+<div class="nav-links">
+<a href="haid.html">Haid</a>
+<a href="nifas.html">Nifas</a>
+<a href="iddah.html">Iddah</a>
+<a href="istihadhah.html" class="active">Istihadhah</a>
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<h1>Kalkulator Istihadhah</h1>
+
+<p>Menentukan darah haid dan istihadhah menurut mazhab Syafi'i</p>
+
+</section>
+
+
+<div class="container">
+
+<div class="card">
+
+<label>Hari mulai keluar darah</label>
+
+<input type="date" id="startDate">
+
+
+<label>Kebiasaan Haid (hari)</label>
+
+<input type="number" id="habit" placeholder="contoh: 7">
+
+<label>Hari berhenti darah (opsional)</label>
+
+<input type="date" id="stopDate">
+
+<label>Jenis Kondisi</label>
+
+<select id="mode">
+
+<option value="mutadah">Mu'tadah (punya kebiasaan)</option>
+
+<option value="mumayyizah">Mumayyizah (bisa bedakan darah)</option>
+
+<option value="mutahayyirah">Mutahayyirah (bingung)</option>
+
+</select>
+
+<button onclick="hitungIstihadhah()">
+Hitung
+</button>
+
+
+<div class="result-card" id="resultCard">
+
+Hasil akan muncul di sini
+
+</div>
+
+
+<div class="fiqh-box">
+
+<h3>Penjelasan Fiqh</h3>
+
+<p>
+
+Dalam mazhab Syafi'i jika darah keluar melebihi masa kebiasaan haid,
+maka setelah masa tersebut dihukumi istihadhah.
+
+Wanita tetap wajib shalat dan berwudhu setiap masuk waktu shalat.
+
+</p>
+
+</div>
+
+
+<div class="calendar">
+
+<div class="calendar-header">
+
+<div>Min</div>
+<div>Sen</div>
+<div>Sel</div>
+<div>Rab</div>
+<div>Kam</div>
+<div>Jum</div>
+<div>Sab</div>
+
+</div>
+
+<div class="timeline" id="timeline"></div>
+
+</div>
+
+<div class="legend">
+
+<span class="l-haid"></span> Haid
+
+<span class="l-ist"></span> Istihadhah
+
+<span class="l-today"></span> Hari ini
+
+<span class="l-suci"></span> Suci
+
+</div>
+
+</div>
+
+</div>
+
+
+<footer class="footer">
+
+<p>© 2026 Portal Literasi Islam</p>
+
+</footer>
+
+
+
+<script src="js/istihadhah.js"></script>
+<script src="js/fiqh-wanita-i18n.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/access-guard.js"></script>
+
+</body>
+</html>
+
+
+

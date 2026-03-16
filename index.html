@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Literasi Islam | Mimbar Ilmu untuk Umat</title>
+
+  <meta name="description" content="Portal Literasi Islam adalah mimbar ilmu untuk umat, menghadirkan kajian fiqih, sejarah, pemikiran Islam, dan literasi keislaman secara ilmiah, moderat, dan mudah dipahami.">
+  <meta name="keywords" content="kajian islam, fiqh, hadis, pemikiran islam, artikel islam, ilmu islam">
+  <meta name="author" content="Portal Literasi Islam">
+
+ <!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portal Literasi Islam | Mimbar Ilmu untuk Umat">
+<meta property="og:description" content="Portal kajian Islam berbasis literatur ilmiah, membahas fiqih, hadis, dan pemikiran Islam secara mendalam.">
+<meta property="og:url" content="https://islamic-portal.vercel.app/">
+<meta property="og:image" content="https://islamic-portal.vercel.app/assets/images/preview.jpg">
+<meta property="og:site_name" content="Portal Literasi Islam">
+<meta property="og:locale" content="id_ID">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Portal Literasi Islam">
+<meta name="twitter:description" content="Mimbar Ilmu untuk Umat. Kajian fiqih, hadis, dan pemikiran Islam.">
+<meta name="twitter:image" content="https://islamic-portal.vercel.app/assets/images/preview.jpg">
+
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Portal Literasi Islam",
+  "url": "https://islamic-portal.vercel.app/",
+  "description": "Portal kajian Islam berbasis literatur ilmiah.",
+  "inLanguage": "id",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Portal Literasi Islam",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://islamic-portal.vercel.app/assets/images/logo.png"
+    }
+  }
+}
+</script>
+
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD9932Y04M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FD9932Y04M');
+</script>
+
+    <link rel="canonical" href="https://islamic-portal.vercel.app/">
+   <link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e3a8a">
+  <link rel="stylesheet" href="css/style.css?v=20260316c">
+   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Amiri&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+<body class="home-page">
+
+<!-- TOP QUICK MENU (DI ATAS NAV, NEMPEL) -->
+<section class="quick-menu">
+  <div class="quick-menu-inner">
+
+    <a href="about" class="quick-card">
+      <span class="icon">ℹ️</span>
+      <div>
+        <strong>Tentang</strong>
+        <small>Profil & visi portal</small>
+      </div>
+    </a>
+
+    <a href="faq" class="quick-card">
+      <span class="icon">❓</span>
+      <div>
+        <strong>FAQ</strong>
+        <small>Pertanyaan umum</small>
+      </div>
+    </a>
+
+    <a href="donasi" class="quick-card highlight">
+      <span class="icon">🤝</span>
+      <div>
+        <strong>Donasi</strong>
+        <small>Dukung dakwah ilmiah</small>
+      </div>
+    </a>
+
+    <a href="kontak" class="quick-card">
+      <span class="icon">✉️</span>
+      <div>
+        <strong>Kontak</strong>
+        <small>Masukan & diskusi</small>
+      </div>
+    </a>
+
+    <a href="ramadhan" class="quick-card ramadhan-card">
+  <span class="icon">🌙</span>
+  <div>
+    <strong>Jadwal Ramadhan</strong>
+    <small>Imsak & Berbuka</small>
+  </div>
+</a>
+  </div>
+</section>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <button id="menuBtn" class="menu-btn">&#9776;</button>
+    <h1 class="logo">Portal Literasi Islam</h1>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+    <span id="offline-indicator" class="offline-indicator">
+  🌐 Online
+    </span>
+
+  <div class="lang-dropdown" id="langDropdown">
+  <button id="langBtn" class="lang-btn">🌐</button>
+
+  <div class="lang-menu">
+    <button type="button" data-set-lang="id" onclick="setLang('id')">🇮🇩 Indonesia</button>
+    <button type="button" data-set-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+    <button type="button" data-set-lang="ar" onclick="setLang('ar')">🇸🇦 العربية</button>
+  </div>
+</div>
+
+      <a href="bookmark" class="nav-bookmark-icon">🔖 <span class="bookmark-count">3</span></a>
+  </header>
+
+<!-- HERO / SELAMAT DATANG -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+
+ <div class="hero-content">
+  <h1 class="hero-title">Portal Literasi Islam</h1>
+
+  <p id="hero-subtitle" class="hero-text">
+    Ruang kajian Islam yang membahas fiqh, hadis, dan pemikiran
+    keislaman dalam konteks zaman modern secara ilmiah dan mendalam.
+  </p>
+
+  <p class="hero-tagline hero-text">
+    Portal kajian Islam berbasis literatur, analisis ilmiah,
+dan refleksi pemikiran kontemporer
+  </p>
+
+  <div class="hero-buttons hero-cta">
+    <a href="#articles-container" class="btn-primary">📚 Mulai Membaca</a>
+    <a href="#featured-article" class="btn-secondary">⭐ Artikel Pilihan</a>
+  </div>
+
+  <div class="hero-buttons hero-auth-buttons" id="authActionBar">
+    <a href="signin" class="btn-secondary auth-entry-btn" id="signInBtn">Sign In</a>
+    <a href="signup" class="btn-secondary auth-entry-btn" id="signUpBtn">Sign Up</a>
+    <button type="button" class="btn-primary auth-exit-btn" id="logoutBtn" style="display:none;">Log Out</button>
+  </div>
+
+    <div class="hero-featured-mini">
+      <span id="hero-featured-label">⭐ Artikel Pilihan:</span>
+      <a href="#" id="hero-featured-title">Memuat...</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATISTIK OFFLINE -->
+<section class="home-stats">
+  <div class="stat-card">
+    <div class="stat-icon">📥</div>
+    <div class="stat-info">
+      <span id="stat-offline">0</span>
+      <small>Artikel Offline</small>
+    </div>
+  </div>
+</section>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <section class="welcome">
+  <h2 class="welcome-title">
+    Selamat Datang di <span>Portal Literasi Islam</span>
+  </h2>
+
+  <p class="welcome-desc">
+    Portal Literasi Islam merupakan ruang kajian Islam yang menyajikan pembahasan
+    fiqh, hadis, pemikiran Islam, serta isu-isu kontemporer dengan pendekatan
+    <strong>ilmiah, berimbang, dan bertanggung jawab</strong>.
+  </p>
+
+  <div class="welcome-topics">
+    <span>ilmu syariah</span>
+    <span>Hadis</span>
+    <span>Pemikiran Islam</span>
+    <span>Islam & Negara</span>
+  </div>
+
+  <!-- SEARCH (ID TETAP, JS AMAN) -->
+  <div class="welcome-search">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Cari artikel berdasarkan judul�"
+    />
+  </div>
+</section>
+
+<section id="last-reading" class="last-reading" style="display:none;">
+  <h2>📖 Lanjutkan Membaca</h2>
+  <div id="last-reading-card"></div>
+</section>
+
+<section class="reader-stats" id="reader-stats">
+  <h3>📊 Statistik Membaca</h3>
+  <div class="stats-grid">
+    <div class="stat-box">
+      <span id="stat-articles">0</span>
+      <p>Artikel Dibaca</p>
+    </div>
+
+    <div class="stat-box">
+      <span id="stat-time">0</span>
+      <p>Menit Membaca</p>
+    </div>
+
+    <div class="stat-box">
+      <span id="stat-last">�</span>
+      <p>Terakhir Dibaca</p>
+    </div>
+  </div>
+</section>
+
+<section class="home-prayer-widget">
+  <div class="widget-card">
+    <div>
+      <small>Imsak</small>
+      <h3 id="home-imsak">--:--</h3>
+    </div>
+    <div>
+      <small>Subuh</small>
+      <h3 id="home-fajr">--:--</h3>
+    </div>
+    <div>
+      <small>Maghrib</small>
+      <h3 id="home-maghrib">--:--</h3>
+    </div>
+  </div>
+</section>
+
+<section class="intro-values">
+  <div class="values-inner">
+
+    <div class="value-item">
+      <h3>Landasan Keilmuan</h3>
+      <p>
+        Setiap tulisan disusun dengan rujukan literatur dan metodologi yang
+        dapat dipertanggungjawabkan secara akademik.
+      </p>
+    </div>
+
+    <div class="value-item">
+      <h3>Konteks Kontemporer</h3>
+      <p>
+        Islam dibahas dalam relasinya dengan realitas sosial, politik, dan
+        intelektual masa kini secara proporsional.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="author-preview">
+
+  <div class="author-preview-card">
+
+    <h3 class="author-name">
+      Muhammad Nurcholis
+    </h3>
+
+    <p class="author-cred">
+      Mahasiswa Syariah wa Qanun � Universitas Al-Azhar, Kairo
+    </p>
+
+    <p class="author-desc">
+      Menekuni kajian fiqh, pemikiran Islam, dan isu keislaman kontemporer
+      dengan pendekatan literatur klasik dan analisis akademik.
+    </p>
+
+    <a href="about" class="author-btn">
+      Profil Lengkap ?
+    </a>
+
+  </div>
+
+</section>
+
+</section>
+
+
+
+<!-- FEATURED ARTICLE -->
+<section id="featured-article" class="featured-section" style="display:none;">
+  <a id="featured-link" class="featured-card">
+    <img id="featured-thumb" class="featured-thumb" alt="">
+
+    <div class="featured-content">
+      <span id="featured-category" class="category"></span>
+      <h2 id="featured-title"></h2>
+      <p id="featured-excerpt"></p>
+      <span class="featured-cta">Baca Artikel ?</span>
+    </div>
+  </a>
+</section>
+
+
+    <!-- LIST ARTIKEL -->
+   <section class="articles" id="articles">
+  <div class="section-header">
+    <h2>Artikel Terbaru</h2>
+    <p class="section-subtitle">
+      Kumpulan artikel terbaru seputar fiqh, hadis, pemikiran Islam, dan isu kontemporer.
+    </p>
+
+    <button id="download-category" class="btn-premium">
+    ⬇️ Download kategori ini
+  </button>
+
+  <div id="download-progress" class="download-progress" style="display:none;">
+  <div class="progress-bar">
+    <div id="progress-fill"></div>
+  </div>
+  <span id="progress-text">0%</span>
+</div>
+  </div>
+
+  <div id="articles-container">
+
+    <!-- empty state -->
+    <p id="empty-state" style="display:none; text-align:center; color:#666; margin-top:40px;">
+      ❌ Artikel tidak ditemukan
+    </p>
+  
+    <!-- skeleton sementara -->
+    <div class="skeleton-card">
+      <div class="skeleton-thumb"></div>
+      <div class="skeleton-line"></div>
+      <div class="skeleton-line short"></div>
+    </div>
+
+    <div class="skeleton-card">
+      <div class="skeleton-thumb"></div>
+      <div class="skeleton-line"></div>
+      <div class="skeleton-line short"></div>
+    </div>
+
+    <div class="skeleton-card">
+      <div class="skeleton-thumb"></div>
+      <div class="skeleton-line"></div>
+      <div class="skeleton-line short"></div>
+    </div>
+  </div>
+</section>
+</section>
+
+
+<!-- ===================== -->
+<!-- ARTIKEL POPULER -->
+<!-- ===================== -->
+<section class="articles popular-section">
+  <div class="section-header">
+    <h2>
+      <span class="section-icon section-icon-fixed" aria-hidden="true">🔥</span>
+      <span id="popular-title-text">Artikel Populer</span>
+    </h2>
+    <p class="section-subtitle">
+      Artikel yang banyak dibaca dan direkomendasikan.
+    </p>
+  </div>
+
+  <div id="popular-container" class="articles-grid"></div>
+</section>
+
+<section class="tools-section">
+
+<h2>
+<span class="section-icon section-icon-fixed" aria-hidden="true">🛠️</span>
+<span id="tools-title-text">Tools Keislaman</span>
+</h2>
+
+<p class="tools-sub">
+Gunakan berbagai kalkulator fiqh untuk membantu ibadah dan memahami hukum Islam secara praktis.
+</p>
+
+<div class="tools-grid">
+
+<a href="zakat" class="tool-card">
+<span class="icon">💰</span>
+<h3>Kalkulator Zakat</h3>
+</a>
+
+<a href="tools/mawaris" class="tool-card">
+<span class="icon">🧮</span>
+<h3>Kalkulator Mawaris</h3>
+</a>
+
+<a href="haid" class="tool-card">
+<span class="icon">👩</span>
+<h3>Fiqh Wanita</h3>
+</a>
+
+<a href="kaffarah" class="tool-card">
+<span class="icon">🎁</span>
+<h3>Kaffarah & Fidyah</h3>
+</a>
+
+<a href="smart" class="tool-card smart-fiqh-card">
+
+<span class="icon">🧠</span>
+
+<div class="smart-content">
+<h3>Smart Fiqh:</h3>
+<p>Panduan fiqh interaktif untuk membantu memahami hukum ibadah secara cepat.</p>
+</div>
+
+</a>
+
+</div>
+</section>
+
+<section class="categories-home">
+
+<div class="section-header">
+
+<h2>
+<span class="section-icon section-icon-fixed" aria-hidden="true">🗂️</span>
+<span id="categories-title-text">Kategori</span>
+</h2>
+
+<p class="section-sub">
+Jelajahi berbagai topik keilmuan Islam yang tersedia di portal ini.
+</p>
+
+</div>
+
+<div id="category-grid"></div>
+
+</section>
+
+<!-- ===================== -->
+<!-- ARTIKEL OFFLINE -->
+<!-- ===================== -->
+<section id="offline-section" class="offline-section" style="display:none;">
+  <div class="section-header">
+    <h2>
+      <span class="section-icon section-icon-fixed" aria-hidden="true">📥</span>
+      <span id="offline-title-text">Artikel Offline</span>
+    </h2>
+    <a href="offline" class="see-all">Lihat Semua</a>
+  </div>
+
+  <div id="offline-home-list" class="cards"></div>
+</section>
+  </main>
+
+
+ <!-- SIDEBAR -->
+<aside id="sidebar" class="sidebar">
+  <ul class="sidebar-menu">
+
+    <!-- SEMUA -->
+    <li class="single-item">
+      <a href="#" data-filter="all" class="sidebar-link">
+        <span class="icon">📚</span>
+        <span class="text">Semua Artikel</span>
+        <span class="badge" data-count="all">0</span>
+      </a>
+    </li>
+
+   <li class="has-children">
+  <button class="sidebar-toggle">
+    <span class="icon">⚖️</span>
+    <span class="text">Ilmu Syariah</span>
+    <span class="badge" data-count="ilmusyariah">0</span>
+  </button>
+
+  <ul class="submenu">
+
+    <!-- FIQH -->
+    <li class="has-children">
+      <button class="sidebar-toggle">
+        <span class="icon">📘</span>
+        <span class="text">Fiqh</span>
+        <span class="badge" data-count="fiqh">0</span>
+      </button>
+      <ul class="submenu">
+        <li>
+          <a href="#" data-filter="fiqhibadah">
+            <span class="text">Fiqh Ibadah</span>
+            <span class="badge" data-count="fiqhibadah">0</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-filter="fiqhmuamalah">
+            <span class="text">Fiqh Muamalah</span>
+            <span class="badge" data-count="fiqhmuamalah">0</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- USHUL FIQH -->
+    <li class="has-children">
+      <button class="sidebar-toggle">
+        <span class="icon">🧠</span>
+        <span class="text">Ushul Fiqh</span>
+        <span class="badge" data-count="ushulfiqh">0</span>
+      </button>
+      <ul class="submenu">
+        <li>
+          <a href="#" data-filter="maqashidsyariah">
+            <span class="text">Maqashid Syariah</span>
+            <span class="badge" data-count="maqashidsyariah">0</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+</li>
+
+
+    <!-- HADIS -->
+    <li class="has-children">
+      <button class="sidebar-toggle">
+        <span class="icon">📜</span>
+        <span class="text">Hadis</span>
+        <span class="badge" data-count="hadis">0</span>
+      </button>
+      <ul class="submenu">
+        <li><a href="#" data-filter="hadis-mustolah">Mustolah Hadis</a></li>
+        <li><a href="#" data-filter="hadis-ulumul">Ulumul Hadis</a></li>
+         <li><a href="#" data-filter="syama'il">Syama'il</a></li>
+      </ul>
+    </li>
+
+    <!-- PEMIKIRAN -->
+    <li class="has-children">
+      <button class="sidebar-toggle">
+        <span class="icon">💡</span>
+        <span class="text">Pemikiran Islam</span>
+        <span class="badge" data-count="pemikiran">0</span>
+      </button>
+      <ul class="submenu">
+        <li><a href="#" data-filter="pemikiran-klasik">Klasik</a></li>
+        <li><a href="#" data-filter="pemikiran-modern">Modern</a></li>
+      </ul>
+    </li>
+
+    <!-- IBADAH -->
+<li class="has-children">
+  <button class="sidebar-toggle">
+    <span class="icon">🕋</span>
+    <span class="text">Ibadah</span>
+    <span class="badge" data-count="ibadah">0</span>
+  </button>
+
+  <ul class="submenu">
+    <li><a href="#" data-filter="ibadah-shalat">Shalat</a></li>
+    <li><a href="#" data-filter="ibadah-puasa">Puasa</a></li>
+    <li><a href="#" data-filter="ibadah-zakat">Zakat & Sedekah</a></li>
+    <li><a href="#" data-filter="ibadah-haji">Haji & Umrah</a></li>
+    <li><a href="#" data-filter="ibadah-dzikir">Doa & Dzikir</a></li>
+    <li><a href="#" data-filter="ibadah-fadilah">Fadilah Ibadah</a></li>
+  </ul>
+</li>
+
+<!-- AL-QUR'AN & TAFSIR -->
+<li class="has-children">
+  <button class="sidebar-toggle">
+    <span class="icon">📖</span>
+    <span class="text">Al-Qur'an & Tafsir</span>
+    <span class="badge" data-count="quran">0</span>
+  </button>
+
+  <ul class="submenu">
+    <li><a href="#" data-filter="quran-tafsir-ayat">Tafsir Ayat</a></li>
+    <li><a href="#" data-filter="quran-tafsir-surah">Tafsir Surah</a></li>
+    <li><a href="#" data-filter="quran-tematik">Tafsir Tematik</a></li>
+    <li><a href="#" data-filter="quran-ulumul">Ulumul Qur�an</a></li>
+    <li><a href="#" data-filter="quran-fadilah">Fadilah Al-Qur�an</a></li>
+  </ul>
+</li>
+
+    <!-- POLITIK / ISLAM & NEGARA -->
+    <li class="has-children">
+      <button class="sidebar-toggle">
+        <span class="icon">🏛️</span>
+        <span class="text">Islam & Negara</span>
+        <span class="badge" data-count="politik">0</span>
+      </button>
+      <ul class="submenu">
+        <li><a href="#" data-filter="politik">Politik Islam</a></li>
+        <li><a href="#" data-filter="khilafah">Khilafah</a></li>
+        <li><a href="#" data-filter="negara">Negara & Syariah</a></li>
+      </ul>
+    </li>
+
+<li class="has-children">
+  <button class="sidebar-toggle">
+    <span class="icon">🧑‍🏫</span>
+    <span class="text">Pendidikan & Bahasa Arab</span>
+    <span class="badge" data-count="keilmuan">0</span>
+  </button>
+  <ul class="submenu">
+    <li><a href="#" data-filter="bahasa-arab">Inovasi Pembelajaran</a></li>
+    <li><a href="#" data-filter="pengembangan-bahan-ajar">Pengembangan Bahan Ajar</a></li>
+    <li><a href="#" data-filter="manajemen-pendidikan">Manajemen Pendidikan</a></li>
+    <li><a href="#" data-filter="pendidikan-anak-usia-dini">Pendidikan Anak Usia Dini</a></li>
+    <li><a href="#" data-filter="tradisi-keilmuan">Tradisi Keilmuan Islam</a></li>
+  </ul>
+</li>
+
+<li class="has-children">
+  <button class="sidebar-toggle">
+    <span class="icon">🌍</span>
+    <span class="text">Islam & Tantangan Zaman</span>
+    <span class="badge" data-count="kontemporer">0</span>
+  </button>
+  <ul class="submenu">
+    <li><a href="#" data-filter="etika-digital">Etika Digital</a></li>
+    <li><a href="#" data-filter="politik-global">Politik Global</a></li>
+    <li><a href="#" data-filter="gender">Gender & Keadilan</a></li>
+    <li><a href="#" data-filter="ekonomi-modern">Ekonomi Syariah Modern</a></li>
+  </ul>
+</li>
+
+<li class="has-children ramadhan-special">
+  <button class="sidebar-toggle">
+    <span class="icon">🌙</span>
+    <span class="text">Ramadhan di Al-Azhar</span>
+    <span class="badge" data-count="ramadhan">0</span>
+  </button>
+  <ul class="submenu">
+    <li><a href="#" data-filter="catatan-ramadhan">Catatan Ramadhan</a></li>
+    <li><a href="#" data-filter="sejarah-azhar">Sejarah Al-Azhar</a></li>
+    <li><a href="#" data-filter="tadabbur">Tadabbur & Refleksi</a></li>
+  </ul>
+</li>
+
+<!-- ILMU KALAM -->
+<li class="has-children">
+  <button class="sidebar-toggle">
+    <span class="icon">🧭</span>
+    <span class="text">Ilmu Kalam</span>
+    <span class="badge" data-count="kalam">0</span>
+  </button>
+  <ul class="submenu">
+    <li><a href="#" data-filter="kalam-akidah">Akidah Islam</a></li>
+    <li><a href="#" data-filter="kalam-klasik">Kalam Klasik</a></li>
+    <li><a href="#" data-filter="kalam-modern">Kalam Modern</a></li>
+  </ul>
+</li>
+
+<!-- TASAWUF -->
+<li class="has-children">
+  <button class="sidebar-toggle">
+    <span class="icon">✨</span>
+    <span class="text">Tasawuf</span>
+    <span class="badge" data-count="tasawuf">0</span>
+  </button>
+  <ul class="submenu">
+    <li><a href="#" data-filter="tasawuf-akhlak">Akhlak & Tazkiyah</a></li>
+    <li><a href="#" data-filter="tasawuf-tarekat">Tasawuf & Tarekat</a></li>
+  </ul>
+</li>
+
+<!-- SIRAH NABAWIYAH -->
+<li class="has-children">
+  <button class="sidebar-toggle">
+    <span class="icon">🕊️</span>
+    <span class="text">Sirah Nabawiyah</span>
+    <span class="badge" data-count="sirah">0</span>
+  </button>
+  <ul class="submenu">
+    <li><a href="#" data-filter="sirah-makkiyah">Periode Makkiyah</a></li>
+    <li><a href="#" data-filter="sirah-madaniyah">Periode Madaniyah</a></li>
+  </ul>
+</li>
+
+<!-- PSIKOLOGI -->
+<li class="has-children">
+  <button class="sidebar-toggle">
+    <span class="icon">🧠</span>
+    <span class="text">Psikologi</span>
+    <span class="badge" data-count="psikologi">0</span>
+  </button>
+
+  <ul class="submenu">
+    <li><a href="#" data-filter="nafs-dalam-islam">Konsep Nafs dalam Islam</a></li>
+    <li><a href="#" data-filter="psikologi-ibadah">Psikologi Ibadah</a></li>
+    <li><a href="#" data-filter="tazkiyatun-nafs">Tazkiyatun Nafs</a></li>
+    <li><a href="#" data-filter="psikologi-sosial">Psikologi Sosial</a></li>
+    <li><a href="#" data-filter="psikologi-pendidikan">Psikologi Pendidikan</a></li>
+    <li><a href="#" data-filter="kesehatan-mental">Kesehatan Mental</a></li>
+  </ul>
+</li>
+
+<li class="single-item">
+  <a href="tools/mawaris" class="sidebar-link menu-mawaris">
+    <span class="icon">🧮</span>
+    <span class="text">Kalkulator Mawaris</span>
+  </a>
+</li>
+
+<li class="single-item">
+<a href="haid" class="sidebar-link menu-haid">
+<span class="icon">👩</span>
+<span class="text">Fiqh Wanita</span>
+</a>
+</li>
+
+<li class="single-item">
+  <a href="offline" class="sidebar-link menu-offline">
+    <span class="icon">📥</span>
+    <span class="text">Artikel Offline</span>
+    <span id="offline-count" class="badge">0</span>
+  </a>
+</li>
+
+</ul>
+</aside>
+
+
+<!-- OVERLAY (WAJIB ADA) -->
+<div id="overlay"></div>
+
+    <div class="prayer-wrapper">
+  <div class="prayer-box">
+    <div class="ramadhan-stars"></div>
+
+    <!-- TITLE -->
+    <div class="prayer-title">
+      🕌 Waktu Sholat Hari Ini
+      <span id="prayer-status" class="prayer-status"></span>
+    </div>
+
+    <button id="open-quran">📖 Baca Qur'an</button>
+    <button id="open-hadith" class="yellow-btn">
+  📜 Baca Hadis
+</button>
+
+
+    <!-- CLOCK + NEXT -->
+    <div class="prayer-meta">
+      <span id="current-clock">--:--</span>
+      <span class="divider">•</span>
+      <span id="next-prayer">Menuju sholat berikutnya�</span>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="prayer-progress">
+      <div class="progress-label">
+        <span id="progress-prayer-name">Menuju sholat berikutnya</span>
+        <span id="progress-percent">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="prayer-progress-fill"></div>
+      </div>
+    </div>
+
+  
+    <!-- KONTROL UTAMA (SIMPLE) -->
+<div class="prayer-controls-simple">
+  <button id="azan-toggle" class="azan-toggle active">
+    🔔 Azan Aktif
+  </button>
+
+  <button id="settings-toggle" class="settings-btn">
+    ⚙️
+  </button>
+
+  <!-- PANEL SETTINGS MASUK KE DALAM -->
+  <div id="settings-panel" class="settings-panel">
+
+    <div class="setting-item">
+      <label for="azanTolerance">Toleransi Azan</label>
+<select id="azanTolerance">
+        <option value="0">Tepat waktu</option>
+        <option value="1">1 menit</option>
+        <option value="2">2 menit</option>
+        <option value="3" selected>3 menit</option>
+        <option value="5">5 menit</option>
+      </select>
+    </div>
+
+    <div class="setting-item">
+      <label for="notif-toggle">Notifikasi</label>
+<button id="notif-toggle">🔔 Aktifkan Notifikasi</button>
+    </div>
+
+    <div class="setting-item">
+      <label for="azan-volume">Volume Azan</label>
+      <div class="volume-control">
+        <button id="volume-toggle">🔊</button>
+        <input
+          type="range"
+          id="azan-volume"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1"
+        >
+      </div>
+    </div>
+
+    <div class="setting-item">
+    <label for="muadzin-select">Suara Muadzin</label>
+<select id="muadzin-select">
+        <option value="mishary">Mishary Rashid</option>
+        <option value="makkah">Masjidil Haram</option>
+        <option value="madinah">Masjid Nabawi</option>
+        <option value="egypt">Mesir</option>
+      </select>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="prayer-info-row">
+  <div class="prayer-location">
+    📍 <span id="prayer-city">Mendeteksi lokasi...</span>
+  </div>
+  <div class="prayer-hijri" id="hijri-date">
+    📅 --
+  </div>
+  <div id="ramadhan-day" class="ramadhan-day"></div>
+</div>
+
+
+    <!-- AUDIO -->
+    <audio id="azan-audio" preload="auto">
+      <source src="assets/audio/azan/mishary.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- DEV ONLY -->
+    <div class="azan-extra-controls dev-only">
+      <button id="test-azan">🧪 Test Azan</button>
+      <button id="azan-stop">⏹ Stop Azan</button>
+      <div id="azan-status">
+        ℹ️ Tidak ada azan
+      </div>
+    </div>
+
+    <!-- HEADER AYAT -->
+    <div class="prayer-header">
+      <div class="prayer-clock">
+        <span id="current-time">--:--</span>
+        <small id="current-date">--</small>
+      </div>
+
+      <div class="ayah-player">
+        <p id="daily-ayah-arab"></p>
+        <p id="daily-ayah-arti"></p>
+
+     <select id="qari-select">
+  <option value="mishary" data-i18n="qari_mishary">Mishary Rashid</option>
+  <option value="sudais" data-i18n="qari_sudais">Abdul Rahman Al-Sudais</option>
+  <option value="maher" data-i18n="qari_maher">Maher Al-Muaiqly</option>
+</select>
+
+        <div class="ayah-controls">
+          <button id="daily-ayah-play">▶</button>
+          <button id="daily-ayah-stop">⏹</button>
+        </div>
+      </div>
+
+      <button id="alarm-toggle" class="alarm-btn" title="Alarm Adzan">
+        ⏰
+      </button>
+    </div>
+
+    <!-- GRID WAKTU SHOLAT -->
+    <div class="prayer-grid">
+      <div class="prayer-item" id="prayer-fajr">
+        <div class="prayer-name">Subuh</div>
+        <div class="prayer-time" id="time-fajr">--:--</div>
+      </div>
+
+      <div class="prayer-item" id="prayer-dhuhr">
+        <div class="prayer-name">Dzuhur</div>
+        <div class="prayer-time" id="time-dhuhr">--:--</div>
+      </div>
+
+      <div class="prayer-item" id="prayer-asr">
+        <div class="prayer-name">Ashar</div>
+        <div class="prayer-time" id="time-asr">--:--</div>
+      </div>
+
+      <div class="prayer-item" id="prayer-maghrib">
+        <div class="prayer-name">Maghrib</div>
+        <div class="prayer-time" id="time-maghrib">--:--</div>
+      </div>
+
+      <div class="prayer-item" id="prayer-isha">
+        <div class="prayer-name">Isya</div>
+        <div class="prayer-time" id="time-isha">--:--</div>
+      </div>
+    </div>
+
+    <a href="zakat" class="zakat-card">
+  <div class="zakat-left">
+    <div class="zakat-icon">💰</div>
+    <div class="zakat-text">
+      <h3>Kalkulator Zakat</h3>
+      <p>Hitung zakat fitrah dan maal dengan mudah</p>
+    </div>
+  </div>
+  <div class="zakat-arrow">➜</div>
+</a>
+  </div>
+</div>
+
+
+
+ <section class="prefooter">
+  <div class="prefooter-overlay"></div>
+
+  <div class="prefooter-inner">
+
+    <!-- KOLOM 1 -->
+    <div class="prefooter-col">
+      <h4>Portal Literasi Islam</h4>
+      <p>
+        Portal kajian Islam yang menghadirkan analisis ilmiah,
+        pemikiran kritis, dan dialog keislaman dalam konteks modern.
+      </p>
+    </div>
+
+    <!-- KOLOM 2 -->
+    <div class="prefooter-col">
+      <h4>Kajian Utama</h4>
+      <ul>
+      <li><a href="#" data-filter="fiqh">Fiqh & Ushul Fiqh</a></li>
+<li><a href="#" data-filter="hadis">Hadis & Studi Sanad</a></li>
+<li><a href="#" data-filter="pemikiran">Pemikiran Islam</a></li>
+<li><a href="#" data-filter="politik">Islam & Negara</a></li>
+<li><a href="#" data-filter="kontemporer">Isu Kontemporer</a></li>
+</ul>
+    </div>
+
+    <!-- KOLOM 3 -->
+    <div class="prefooter-col">
+      <h4>Fitur</h4>
+      <ul>
+        <li>Artikel Pilihan</li>
+        <li>Bookmark Artikel</li>
+        <li>Pencarian Cerdas</li>
+        <li>Mode Baca</li>
+        <li>Multi Bahasa</li>
+      </ul>
+    </div>
+
+    <!-- KOLOM 4 -->
+    <div class="prefooter-col">
+      <h4>Catatan</h4>
+      <p class="prefooter-note">
+        Seluruh konten disajikan untuk tujuan edukasi dan kajian ilmiah,
+        bukan sebagai fatwa atau klaim kebenaran tunggal.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- SOSIAL MEDIA (TENGAH BAWAH) -->
+  <div class="prefooter-social">
+    <a href="https://wa.me/6282124305278" aria-label="WhatsApp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="https://instagram.com/nurcholism51" aria-label="Instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+   <a href="https://www.threads.net/@nurcholism51" aria-label="Threads" target="_blank">
+  <i class="fa-brands fa-threads"></i>
+</a>
+    <a href="mailto:nurcholism51@gmail.com" aria-label="Email">
+      <i class="fa-regular fa-envelope"></i>
+    </a>
+  </div>
+</section>
+
+  <footer class="site-footer">
+
+  <div class="footer-links">
+    <a href="about">Tentang</a>
+    <a href="faq">FAQ</a>
+    <a href="kontak">Kontak</a>
+    <a href="privacy">Privacy Policy</a>
+    <a href="disclaimer">Disclaimer</a>
+  </div>
+
+  <div class="footer-copy">
+    &copy; 2026 Portal Literasi Islam - Seluruh hak cipta dilindungi.
+  </div>
+
+</footer>
+
+<!-- FLOATING ACTIONS -->
+<div class="floating-actions">
+
+  <!-- TASBIH -->
+  <div class="floating-btn" id="openTasbih">📿</div>
+
+  <!-- KIBLAT -->
+  <div class="floating-btn" id="openKiblat">🧭</div>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/6282124305278"
+     target="_blank"
+     class="floating-btn wa-btn"
+     aria-label="Chat via WhatsApp">
+     <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+</div>
+
+
+<!-- POPUP TASBIH -->
+<div class="popup-overlay" id="tasbihPopup">
+  <div class="popup-content">
+
+    <span class="close-popup" id="closeTasbih">&times;</span>
+
+    <h3>📿 Tasbih Digital</h3>
+
+    <div class="tasbih-arab" id="tasbihText">
+      سَبِّحِ اللَّه
+    </div>
+
+    <div class="tasbih-translation" id="tasbihTranslation">
+      Maha Suci Allah
+    </div>
+
+    <div class="tasbih-count" id="tasbihCount">0</div>
+
+    <button id="tasbihBtn">Tekan</button>
+    <button id="resetTasbih">Reset</button>
+
+  </div>
+</div>
+
+
+<!-- POPUP KIBLAT -->
+<div class="popup-overlay" id="kiblatPopup">
+  <div class="popup-content">
+
+    <span class="close-popup" id="closeKiblat">&times;</span>
+
+    <h3>🧭 Arah Kiblat</h3>
+
+    <div id="kiblatDegree">Mendeteksi...</div>
+    <div class="compass" id="compass">🧭</div>
+
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div id="toast" class="toast"></div>
+
+<div id="offline-toast" class="offline-toast">
+  📴 Anda sedang offline. Hanya artikel yang sudah diunduh yang bisa dibaca.
+</div>
+
+
+<div class="quran-popup" id="quran-popup">
+  <div class="quran-container">
+
+    <div class="quran-header">
+      <h2>📖 Baca Al-Qur'an</h2>
+
+      <select id="translation-select">
+  <option value="33">Indonesia</option>
+  <option value="20">English</option>
+</select>
+
+      <div class="quran-header-controls">
+        <select id="juz-select"></select>
+        <button id="quran-close">✕</button>
+      </div>
+    </div>
+
+    <div class="quran-body" id="quran-body">
+      <div class="loading">Memuat...</div>
+    </div>
+
+  </div>
+</div>
+
+<button id="scrollToTopBtn" class="scroll-to-top" aria-label="Kembali ke atas">
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M12 19V5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<div id="hadith-popup" class="popup">
+  <div class="popup-content">
+
+    <div class="popup-header">
+      <h2>📚 Koleksi Hadis</h2>
+      <button id="hadith-close">✕</button>
+    </div>
+
+    <div class="hadith-controls">
+      <select id="book-select">
+        <option value="bukhari">Sahih Bukhari</option>
+        <option value="muslim">Sahih Muslim</option>
+        <option value="tirmidzi">Sunan Tirmidzi</option>
+        <option value="abu-dawud">Sunan Abu Dawud</option>
+        <option value="nasai">Sunan An-Nasa�i</option>
+        <option value="ibnu-majah">Ibnu Majah</option>
+      </select>
+
+      <input type="text" id="hadith-range" value="1-5" />
+      <button id="load-hadith">Load</button>
+    </div>
+
+    <div id="hadith-body"></div>
+
+  </div>
+</div>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js")
+      .catch(err => console.log("SW error:", err));
+  });
+}
+</script>
+
+<script src="js/auth.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const signInBtn = document.getElementById("signInBtn");
+    const signUpBtn = document.getElementById("signUpBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
+    const user = window.PortalAuth ? window.PortalAuth.getCurrentUser() : null;
+
+    if (user) {
+      if (signInBtn) signInBtn.style.display = "none";
+      if (signUpBtn) signUpBtn.style.display = "none";
+      if (logoutBtn) {
+        logoutBtn.style.display = "inline-flex";
+        logoutBtn.addEventListener("click", () => {
+          window.PortalAuth.logout();
+          window.location.reload();
+        });
+      }
+      return;
+    }
+
+    if (logoutBtn) {
+      logoutBtn.style.display = "none";
+    }
+  });
+</script>
+<script src="js/article-store.js?v=20260313n"></script>
+<script type="module" src="js/article.js?v=20260316i"></script>
+<script type="module" src="js/bookmark.js?v=20260313k"></script>
+<script type="module" src="js/prayer.js?v=20260316a"></script>
+<script src="js/i18n.js?v=20260316a"></script>
+
+</body>
+</html>
+
