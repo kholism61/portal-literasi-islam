@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Host: https://islamic-portal.vercel.app
-Sitemap: https://islamic-portal.vercel.app/sitemap.xml
